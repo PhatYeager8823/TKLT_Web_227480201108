@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Js 2A</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .xuly {
+            width: 300px;
+            height: 200px;
+            background-color: yellow;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+        }
+
+        #notice {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="xuly">
+            <p id="notice"></p>
+            <button onclick="thongBao()">Ấn để thông báo</button>
+        </div>
+    </div>
+    <script>
+        function thongBao() {
+            document.getElementById("notice").innerHTML = "Welcome to javascript!";
+        }
+    </script>
+</body>
+</html>

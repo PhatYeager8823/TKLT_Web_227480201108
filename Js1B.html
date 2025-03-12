@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Js 1B</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .input {
+            background-color: aqua;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #class, #name, h1, h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <h1>TRƯỜNG ĐẠI HỌC BẠC LIÊU</h1>
+            <h2>KHOA CÔNG NGHỆ THÔNG TIN</h2>
+            <p id="class"></p>
+            <p id="name"></p>
+        </div>
+    </div>
+    
+    <script>
+        let lop = prompt("Nhập lớp học của bạn: ");
+        let ten = prompt("Nhập tên của bạn: ");
+        if (lop === null) {
+            document.getElementById("class").innerHTML = "Lớp học:......";
+        } else {
+            document.getElementById("class").innerHTML = "Lớp học: " + lop;
+        }
+
+        if (ten === null) {
+            document.getElementById("name").innerHTML = "Họ và tên sinh viên:......";
+        } else {
+            document.getElementById("name").innerHTML = "Họ và tên sinh viên: " + ten;
+        }
+    </script>
+</body>
+</html>
