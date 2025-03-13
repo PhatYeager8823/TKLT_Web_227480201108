@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài Js 3A</title>
+    <title>Bài Js 4A</title>
     <style>
         * {
             margin: 0;
@@ -32,13 +32,14 @@
 
         #msg03 {
             font-size: 24px;
+            width: 200px;
             margin-bottom: 20px;
             text-align: center;
         }
 
         button {
             padding: 10px;
-            width: 100px;
+            width: 150px;
             border-radius: 10px;
             background-color: #4CAF50;
         }
@@ -48,7 +49,7 @@
     <div class="container">
         <div class="input">
             <input type="text" id="msg03">
-            <button onclick="thucHien()">Welcome</button>  
+            <button onclick="thucHien()">Chào</button>  
         </div>
     </div>
 
@@ -57,7 +58,7 @@
         document.getElementById("msg03").value = "";
         };
         function thucHien () {
-            document.getElementById("msg03").value = "Welcome to Students";
+            document.getElementById("msg03").value = "Chào";
         }
     </script>
 </body>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Js 8A</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .input {
+            background-color: yellow;
+            width: 300px;
+            height: 150px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #inputInt {
+            font-size: 20px;
+            border-radius: 10px;
+            margin: 15px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" id="inputInt">
+            <button onclick="xuLy()">Thực hiện</button>
+        </div>
+    </div>
+
+    <script>
+        function xuLy () {
+            let value = parseInt(document.getElementById("inputInt").value);
+            if (!value) {
+                alert("Vui lòng nhập giá trị!")
+                return;
+            }
+            switch(value) {
+                case 1: 
+                    window.open("https://blu.edu.vn/"); break;
+                case 2:
+                    window.open("https://www.ctu.edu.vn/"); break;
+                case 3:
+                    window.open("https://vndoc.com/"); break;
+                default:
+                    window.open("https://meta.vn/");
+            }
+        }
+    </script>
+</body>
+</html>

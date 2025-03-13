@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Js 7A</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .input {
+            background-color: aquamarine;
+            width: 300px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        #year {
+            font-size: 20px;
+            border-radius: 10px;
+            /* padding: 10px; */
+            margin: 15px;
+            text-align: center;
+        }
+
+        button {
+            width: 90px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #4CAF50;
+        }
+
+        #hienThi {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="input">
+        <p id="hienThi"></p>
+        <input type="text" id="year">
+        <button onclick="tinhTuoi()">Tính</button>  
+    </div>
+
+    <script>
+        function tinhTuoi () {
+            let D = new Date;
+            let year = document.getElementById("year").value;
+            if (!year) {
+                alert("Vui lòng nhập năm sinh của bạn!")
+                return;
+            }
+            let selectYear = parseInt(year);
+            if (selectYear <= 0 || selectYear > D.getFullYear()) {
+                alert("Vui lòng nhập năm sinh hợp lệ!")
+                return;
+            }
+            let age = D.getFullYear() - selectYear;
+            document.getElementById("hienThi").innerHTML = "Tuổi của bạn bây giờ là: " + age;
+        }
+    </script>
+   </div> 
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài Js 3A</title>
+    <title>Bài Js 4B</title>
     <style>
         * {
             margin: 0;
@@ -19,7 +19,7 @@
         }
 
         .input {
-            width: 300px;
+            width: 400px;
             height: 200px;
             background-color: aqua;
             display: flex;
@@ -30,25 +30,37 @@
             border-radius: 10px;
         }
 
-        #msg03 {
-            font-size: 24px;
+        #txtname, #txtunit {
+            font-size: 20px;
+            width: 200px;
             margin-bottom: 20px;
             text-align: center;
+            border-radius: 10px;
         }
 
         button {
             padding: 10px;
-            width: 100px;
+            width: 150px;
             border-radius: 10px;
             background-color: #4CAF50;
+            margin: 10px;
+        }
+
+        .control {
+            display: flex;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="input">
-            <input type="text" id="msg03">
-            <button onclick="thucHien()">Welcome</button>  
+            <input type="text" id="txtname">
+            <input type="text" id="txtunit">
+            <div class="control">
+                <button onclick="ctname()">Họ tên</button>  
+                <button onclick="ctunit()">Đơn vị</button> 
+            </div>
+             
         </div>
     </div>
 
@@ -56,8 +68,12 @@
         window.onload = function() {
         document.getElementById("msg03").value = "";
         };
-        function thucHien () {
-            document.getElementById("msg03").value = "Welcome to Students";
+        function ctname () {
+            document.getElementById("txtname").value = "Dương Thịnh Phát";
+        }
+
+        function ctunit () {
+            document.getElementById("txtunit").value = "Trường Đại học Bạc Liêu. Khoa Kỹ thuật và Công nghệ";
         }
     </script>
 </body>

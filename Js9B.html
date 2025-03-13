@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài JS 9A</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .input {
+            width: 450px;
+            height: 200px;
+            background-color: yellow;
+            border-radius: 10px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        #divices {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #8e3e3e;
+        }
+
+        #result {
+            background-color: yellow;
+            display: block;
+            width: 400px;
+            min-height: 500px;
+            border-radius: 10px;
+            border: 1px solid black;
+            margin-left: 30px;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <p>Nhập số lượng thiết bị: <input type="number" id="divices"></p>
+            <button onclick="displayDevice()">Nhập</button>
+        </div>
+        <p id="result"></p> 
+    </div>
+
+    <script>
+        function displayDevice() {
+            let devices = [];
+            let devicesIsComputer = [];
+            let dv = parseInt(document.getElementById("divices").value);
+
+            if (isNaN(dv) || dv <= 0) {
+                alert("Vui lòng nhập số lượng thiết bị hợp lệ (lớn hơn 0)!");
+                return;
+            }
+
+            for (let i = 0; i < dv; i++) {
+                let tb = prompt(`Nhập thiết bị thứ ${i + 1}:`).trim();
+                if (!tb) {
+                    alert("Vui lòng nhập tên thiết bị!");
+                    return;
+                }
+                devices.push(tb);
+                if (tb.toLowerCase().includes("computer")) {
+                    devicesIsComputer.push(tb);
+                }
+            }
+
+            document.getElementById("result").innerHTML = `
+                <b>Danh sách các thiết bị:</b><br>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên thiết bị</th>
+                    </tr>
+                    ${devices.map((tb, index) => `<tr><td>${index + 1}</td><td>${tb}</td></tr>`).join("")}
+                </table>
+                <br>
+                <b>Thiết bị máy tính:</b><br>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên thiết bị</th>
+                    </tr>
+                    ${devicesIsComputer.length > 0 ? 
+                        devicesIsComputer.map((tb, index) => `<tr><td>${index + 1}</td><td>${tb}</td></tr>`).join("") : 
+                        "<tr><td colspan='2'>Không có thiết bị máy tính</td></tr>"
+                    }
+                </table>`;
+        }
+    </script>
+</body>
+</html>
