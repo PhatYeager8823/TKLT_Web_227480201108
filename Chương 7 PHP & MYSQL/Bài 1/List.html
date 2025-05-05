@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: aqua;
+            width: 500px;
+            height: 350px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        hr {
+            width: 90%;
+        }
+
+        #list {
+            margin-left: 40px;
+            font-size: 20px;
+            display: block;
+        }
+
+        p {
+            margin-left: 40px;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 20px 0 0 40px;
+            padding: 10px 20px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(165, 42, 42, 0.896);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="body">
+            <h1>NHẬP DỮ LIỆU CẦN LIỆT KÊ</h1>
+            <hr>
+            <p>Chọn dữ liệu:</p>
+            <form action="List.php" method="post">
+                <select name="list" id="list">
+                    <option>Hàng hóa</option>
+                    <option>Khách hàng</option>
+                    <option>Nhà sản xuất</option>
+                    <option>Hóa đơn</option>
+                </select>
+                <button type="submit">In dữ liệu</button>
+            </form>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Js 11A</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .input {
+            background-color: aqua;
+            width: 600px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 25px;
+            padding: 20px;
+        }
+
+        button {
+            background-color: #4A50FA;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white
+        }
+
+        button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <h2>Bạn có muốn thay đổi thế giới? Hãy click vào đây!</h2>
+            <button onclick="displayButton()">Thực hiện</button>
+        </div>
+    </div>
+    
+    <script>
+        function displayButton () {
+            let color = prompt("Nhập màu sắc của bạn: ")
+            if (color) {
+                document.bgColor = color;
+            } else {
+                alert("Đừng bỏ trống!");
+            }
+        }
+    </script>
+</body>
+</html>

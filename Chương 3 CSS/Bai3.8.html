@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .menu {
+      background-color: #333;
+      display: flex;
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu > li > a {
+      display: block;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .menu > li:hover {
+      background-color: #444;
+    }
+
+    .menu li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      min-width: 200px;
+      z-index: 999;
+    }
+
+    .menu li:hover > ul {
+      display: block;
+    }
+
+    .menu li ul li a {
+      display: block;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .menu li ul li a:hover {
+      background-color: #555;
+    }
+
+    .menu li ul li {
+      position: relative;
+    }
+
+    .menu li ul li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #555;
+      min-width: 200px;
+    }
+
+    .menu li ul li:hover > ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <ul class="menu">
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#">Giới thiệu</a></li>
+    <li>
+      <a href="#">Khóa học ▼</a>
+      <ul>
+        <li>
+          <a href="#">Tin học căn bản ▶</a>
+          <ul>
+            <li><a href="#">Microsoft Word 2010</a></li>
+            <li><a href="#">Microsoft Excel 2010</a></li>
+            <li><a href="#">Microsoft PowerPoint 2010</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Tin học phổ thông</a></li>
+        <li><a href="#">Lập trình C</a></li>
+        <li><a href="#">Lập trình Pascal</a></li>
+        <li><a href="#">Thiết kế website</a></li>
+        <li><a href="#">Vẽ kỹ thuật AutoCAD</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Thủ thuật</a></li>
+    <li><a href="#">Bài viết</a></li>
+  </ul>
+
+</body>
+</html>

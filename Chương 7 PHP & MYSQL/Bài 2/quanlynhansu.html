@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            /* height: 100vh; */
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        form {
+            /* display: flex; */
+            margin-top: 20px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .login {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: aqua;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: rgb(0, 208, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PHẦM MỀM QUẢN LÝ THUÊ PHÒNG CHO KHÁCH HÀNG</h1>
+        <p id="thongbao">Vui lòng đăng nhập vào hệ thống để có thể sử dụng</p>
+        <form action="login.php" method="post">
+            <label for="account">Tài khoản</label><input type="text" id="account" name="account"><br>
+            <label for="password">Mật khẩu</label><input type="password" id="password" name="password"><br>
+            <div class="login">
+                <button type="submit">Đăng nhập</button>
+                <button type="button">Thoát</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector("form");
+    
+        form.addEventListener("submit", function (e) {
+            const acc = document.getElementById("account").value.trim();
+            const pass = document.getElementById("password").value.trim();
+    
+            if (!acc) {
+                document.getElementById("thongbao").innerHTML = "Vui lòng nhập tài khoản!"; 
+                e.preventDefault(); 
+                return;
+            }
+    
+            if (!pass) {
+                document.getElementById("thongbao").innerHTML = "Vui lòng nhập mật khẩu!"; 
+                e.preventDefault(); 
+            }
+        });
+    </script>
+    
+</body>
+</html>

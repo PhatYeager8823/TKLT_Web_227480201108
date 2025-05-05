@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2.4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .Navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: auto;            
+            font-family: Verdana;
+        }
+
+        .Tieu-ngu {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .Tieu-ngu1, .Tieu-ngu2 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .Tieu-de {
+            color: red;
+        }
+
+        .body {
+            margin: 50px 400px;
+            font-size: 25px;
+        } 
+
+        button {
+            padding: 8px 10px;
+            background-color: aqua;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(0, 170, 255);
+        }
+
+        .radio {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+        }
+
+        label {
+            margin-right: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="Navbar">
+        <div class="Tieu-ngu">
+            <div class="Tieu-ngu1">
+                <p style="font-weight: bold;">TRƯỜNG ĐẠI HỌC BẠC LIÊU</p>
+                <p>KHOA KỸ THUẬT VÀ CÔNG NGHỆ</p>
+            </div>
+            <div class="Tieu-ngu2">
+                <p style="font-weight: bold;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+                <p style="text-align: center;">Độc lập - Tự do - Hạnh phúc</p>
+            </div>
+        </div>
+        <div class="Tieu-de">
+            <h1>ĐĂNG KÝ XÉT TUYỂN</h1>
+        </div>
+    </div>
+    <div class="body">
+        <div>
+            <label for="fullname">Họ tên:</label>
+            <input type="text" id="fullname" name="fullname">
+        </div>
+        <div>Giới tính:  
+            <input type="radio" name="gender" id="male">
+            <label for="male">Nam</label>
+        
+            <input type="radio" name="gender" id="female">
+            <label for="female">Nữ</label>
+        </div>
+        <p>Ngành thi:</p>
+        <div class="radio">
+            <label>
+                <input type="radio" name="major" value="it"> Công nghệ thông tin
+            </label>
+            <label>
+                <input type="radio" name="major" value="finance"> Mầm non
+            </label>
+            <label>
+                <input type="radio" name="major" value="marketing"> Âm nhạc
+            </label>
+        </div>
+        
+        <button>Đồng ý</button>
+        <button>Không đồng ý</button>
+    </div>
+</body>
+</html>

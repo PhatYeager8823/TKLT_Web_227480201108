@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>5 Button JavaScript</title>
+  <style>
+    button {
+      margin: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: aqua;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+        background-color: aquamarine;
+    }
+    h1 {
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="myHeading">Xin chào</h1>
+
+  <button onclick="showAlert()">Button 1: Alert</button>
+  <button onclick="changeHeading()">Button 2: Đổi H1</button>
+  <button onclick="calculate()">Button 3: Tính toán</button>
+  <button onclick="changeColor()">Button 4: Đổi màu nền</button>
+  <button onclick="showTime()">Button 5: Hiển thị giờ</button>
+
+  <p id="output" style="margin-top: 20px; font-weight: bold;"></p>
+
+  <script>
+    function showAlert() {
+      alert("Hello world!");
+    }
+
+    function changeHeading() {
+      document.getElementById("myHeading").innerText = "Hello JavaScript";
+    }
+
+    function calculate() {
+      let a = 5;
+      let b = 3;
+      let result = a * b + 2;
+      document.getElementById("output").innerText = `Kết quả phép tính 5 * 3 + 2 là: ${result}`;
+    }
+
+    function changeColor() {
+      document.body.style.backgroundColor =
+        document.body.style.backgroundColor === "lightyellow" ? "white" : "lightyellow";
+    }
+
+    function showTime() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString();
+      document.getElementById("output").innerText = `Bây giờ là: ${timeStr}`;
+    }
+  </script>
+
+</body>
+</html>

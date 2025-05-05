@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: aqua;
+    width: 450px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    border-radius: 10px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px 0 0 20px;
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 1px solid black;
+    width: 85%;
+    margin-top: 3px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cong, .tru, .nhan, .chia, .mod {
+    padding: 10px;
+    width: 70px;
+    border: none;
+    border-radius: 10px;
+    background-color: pink;
+    cursor: pointer;
+}
+

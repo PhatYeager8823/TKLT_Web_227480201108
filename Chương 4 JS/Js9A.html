@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Js 9A</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .input {
+            width: 450px;
+            height: 200px;
+            background-color: yellow;
+            border-radius: 10px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            font-size: 24px;
+            /* margin-bottom: 20px; */
+        }
+
+        #Students {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #8e3e3e;
+        }
+
+        #result {
+            background-color: yellow;
+            display: block;
+            width: 400px;
+            height: 500px;
+            border-radius: 10px;
+            border: 1px solid black;
+            margin-left: 30px;
+            text-align: center;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <p>Nhập số lượng học sinh: <input type="text" id="Students"></p>
+            <button onclick="displayStudents()">Hiển thị</button>
+        </div>
+        <p id="result"></p> 
+    </div>
+
+    <script>
+        function displayStudents() {
+            let students = [];
+            let st = parseInt(document.getElementById("Students").value);
+            if (isNaN(st)) {
+                alert("Vui lòng nhập số học sinh!");
+                return;
+            }
+
+            if(st <= 0) {
+                alert("Vui lòng nhập số học sinh lớn hơn 0!");
+                return;
+            }
+
+            for (let i = 0; i < st; i++) {
+                let hs = prompt(`Nhập học sinh thứ ${i + 1}:`)
+                if (!hs) {
+                    alert("Vui lòng nhập tên học sinh!");
+                    return;
+                }
+                students.push(hs);
+            }
+            students.sort();
+            document.getElementById("result").innerHTML = `<b>Danh sách sau khi sắp xếp:</b><br>${students.join("<br>")}`;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2.3</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .Tong {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: auto;
+        }
+
+        /* Tiêu đề */
+        .ab {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .a, .b {
+            flex: 1;
+            text-align: center;
+        }
+
+        .truong, .tieu-ngu1 {
+            font-weight: bold;
+        }
+
+        .tieu-ngu2 {
+            font-style: italic;
+        }
+
+        /* Tiêu đề chính */
+        .c {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tieu-de1 {
+            font-family: Verdana;
+            color: red;
+        }
+
+        .tieu-de2 {
+            font-weight: bold;
+            font-size: 25px;
+            font-style: italic;
+        }
+
+        /* Danh sách ngành học */
+        .d {
+            width: 60%;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .d ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+        }
+
+        .d ul {
+            margin-left: 40px;
+            font-weight: normal;
+        }
+
+        /* Hình ảnh */
+        .e {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .e img {
+            width: 260px;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Tong">
+        <!-- Tiêu ngữ -->
+        <div class="ab">
+            <div class="a">
+                <p class="truong">TRƯỜNG ĐẠI HỌC BẠC LIÊU</p>
+                <p>KHOA KỸ THUẬT VÀ CÔNG NGHỆ</p>
+            </div>
+            <div class="b">
+                <p class="tieu-ngu1">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+                <p class="tieu-ngu2">Độc Lập - Tự Do - Hạnh Phúc</p>
+            </div>
+        </div>
+
+        <!-- Tiêu đề chính -->
+        <div class="c">
+            <h1 class="tieu-de1">THÔNG BÁO TUYỂN SINH</h1>
+            <p class="tieu-de2">(Hệ đại học không chính quy)</p>
+        </div>
+
+        <!-- Danh sách ngành học -->
+        <div class="d">
+            <ol>
+                <li>Tài chính tín dụng</li>
+                <li>Quản lý đất đai</li>
+                <li>Công nghệ thực phẩm</li>
+                <li>Văn hóa du lịch</li>
+                <ul>
+                    <li><strong>Môn thi:</strong> Văn, Sử, Địa</li>
+                    <li><strong>Ngày thi:</strong> 19/12/2008</li>
+                    <li><strong>Ôn tập văn hóa:</strong> 13/11/2008</li>
+                </ul>
+                <li>Công tác xã hội</li>
+                <li>Báo chí</li>
+                <ul>
+                    <li><strong>Môn thi:</strong> Văn, Sử, Địa</li>
+                    <li><strong>Ngày thi:</strong> 20/12/2008</li>
+                    <li><strong>Ôn tập văn hóa:</strong> 14/11/2008</li>
+                </ul>
+            </ol>
+        </div>
+
+        <!-- Hình ảnh -->
+        <div class="e">
+            <img src="LogoTruong.jpg" alt="Logo Trường">
+            <img src="th.jpg" alt="Hình minh họa">
+            <img src="truong-dai-hoc-bac-lieu-800-173359.jpg" alt="Hình trường">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hiển thị Thông tin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      padding: 10px;
+      width: 250px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Thông tin cá nhân</h2>
+    <input type="text" id="ho" placeholder="Nhập họ của bạn">
+    <input type="text" id="ten" placeholder="Nhập tên của bạn">
+    <button onclick="hienThi()">Hiển thị</button>
+  </div>
+
+  <script>
+    function hienThi() {
+      const ho = document.getElementById("ho").value.trim();
+      const ten = document.getElementById("ten").value.trim();
+
+      if (!ho && !ten) {
+        alert("Vui lòng nhập đầy đủ họ và tên!");
+        return;
+      }
+
+      let message = "";
+      if (ho && ten) message += "Họ và tên: " + ho + " " + ten +"\n";
+
+      alert(message);
+    }
+  </script>
+
+</body>
+</html>

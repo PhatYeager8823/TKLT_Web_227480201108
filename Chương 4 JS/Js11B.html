@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đổi màu nền</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .blue { background-color: blue; }
+    .yellow { background-color: gold; color: black; }
+    .green { background-color: green; }
+  </style>
+</head>
+<body>
+
+  <button class="blue" onclick="changeBackground('blue')">Xanh dương</button>
+  <button class="yellow" onclick="changeBackground('yellow')">Vàng</button>
+  <button class="green" onclick="changeBackground('green')">Xanh lá</button>
+
+  <script>
+    function changeBackground(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+
+</body>
+</html>

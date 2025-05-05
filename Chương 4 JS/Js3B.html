@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Js 3B</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .input {
+            width: 800px;
+            height: 200px;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* font-size: 24px; */
+            border-radius: 10px;
+        }
+
+        #msg03 {
+            font-size: 24px;
+            width: 700px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            width: 150px;
+            border-radius: 10px;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" id="msg03">
+            <button onclick="thucHien()">Hello Everybody</button>  
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+        document.getElementById("msg03").value = "";
+        };
+        function thucHien () {
+            document.getElementById("msg03").value = "Hello Everybody, I am studying web design with Javascript";
+        }
+    </script>
+</body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Phiếu Đăng Ký Dự Thi Thể Thao</title>
+  <style>
+    body {
+      font-family: Verdana;
+      font-size: 20px;
+      margin: 40px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h2 {
+        text-align: center;
+    }
+    .form-section {
+      max-width: 500px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 200px;
+      padding: 8px;
+      font-size: 18px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    .checkbox-group {
+      margin-top: 10px;
+    }
+    .checkbox-group label {
+      font-weight: normal;
+    }
+    .checkbox-group input {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <p><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b><br>
+  Độc lập - Tự do - Hạnh phúc</p>
+  <p><strong>TRƯỜNG ĐẠI HỌC BẠC LIÊU</strong><br>
+  KHOA KỸ THUẬT VÀ CÔNG NGHỆ</p>
+</div>
+
+<h2>PHIẾU ĐĂNG KÝ DỰ THI THỂ THAO</h2>
+
+<div class="form-section">
+  <label for="hoten">Họ tên:</label>
+  <input type="text" id="hoten" name="hoten">
+
+  <label for="matkhau">Mật khẩu:</label>
+  <input type="password" id="matkhau" name="matkhau">
+
+  <div class="checkbox-group">
+    <label>Môn thể thao:</label>
+    <label><input type="checkbox" name="thethao" value="bongda"> Bóng đá</label>
+    <label><input type="checkbox" name="thethao" value="bongchuyen"> Bóng chuyền</label>
+    <label><input type="checkbox" name="thethao" value="dienkinh"> Điền kinh</label>
+    <label><input type="checkbox" name="thethao" value="boiloi"> Bơi lội</label>
+  </div>
+</div>
+</body>
+</html>
